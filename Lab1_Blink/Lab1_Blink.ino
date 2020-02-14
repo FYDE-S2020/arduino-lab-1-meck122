@@ -50,13 +50,13 @@ void timedBlink(int n){
 
 // the loop function runs over and over again forever
 void loop() {
-  timedBlink(250);
-  timedBlink(500);
-  timedBlink(1000);
-//  for(int i = 0; i < 100; i++){
-//    dimmer(10, i);             
-//  }
-//  for(int j = 100; j > 0; j--){
-//    dimmer(10, j);
-//  }
+  //timedBlink(250);
+  //timedBlink(500);
+  //timedBlink(1000);
+  for(int i = 0; i < 100; i++){
+    dimmer(100, i);             
+  }
+  for(int j = 100; j > 0; j--){
+    dimmer(100, j);
+  }
 }
