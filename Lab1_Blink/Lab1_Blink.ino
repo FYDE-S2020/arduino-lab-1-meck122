@@ -40,20 +40,23 @@ void dimmer(int freq, int duty) {
     delay(offTime);
 }
 
-void timedBlink(){
+void timedBlink(int n){
   digitalWrite(LED_PIN, HIGH);   // turn the LED on (HIGH is the voltage level)
-  delay(500);                       // wait for a second
+  delay(n);                       // wait for a second
   digitalWrite(LED_PIN, LOW);    // turn the LED off by making the voltage LOW
-  delay(500); 
+  delay(n); 
 }
 
 
 // the loop function runs over and over again forever
 void loop() {
-  for(int i = 0; i < 100; i++){
-    dimmer(10, i);             
-  }
-  for(int j = 100; j > 0; j--){
-    dimmer(10, j);
-  }
+  timedBlink(250);
+  timedBlink(500);
+  timedBlink(1000);
+//  for(int i = 0; i < 100; i++){
+//    dimmer(10, i);             
+//  }
+//  for(int j = 100; j > 0; j--){
+//    dimmer(10, j);
+//  }
 }
